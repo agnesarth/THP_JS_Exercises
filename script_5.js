@@ -41,7 +41,7 @@ console.log(order[0])
 
 
 //Question 3:
-function compare(a, b) {
+function compare2(a, b) {
   const rentedA = a.rented
   const rentedB = b.rented
 
@@ -54,7 +54,7 @@ let comparison = 0;
   return comparison;
 }
 
-order = books.sort(compare);
+order = books.sort(compare2);
 console.log(`Le livre le moins emprunté est :`)
 console.log(order[0])
 
