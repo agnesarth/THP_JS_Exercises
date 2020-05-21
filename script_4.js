@@ -33,3 +33,29 @@ for (let {first: f, last: l} of entrepreneurs) {
 }
 console.log("Voici un array contenant les prénoms et noms des entrepreneurs :")
 console.log(array)
+
+//Question 3:
+console.log(`Voici l'âge de ces entrepreneurs aujourd'hui :`)
+const today = 2020
+for (let {first: f, last: l, year: y} of entrepreneurs) {
+  let age = today - y
+  console.log(f + ` ` + l + ` a ` + age + ` ans`)
+}
+
+//Question 4:
+console.log(`Voici la liste classée par ordre alphabétique :`)
+function compare(a, b) {
+  const nameA = a.last.toUpperCase();
+  const nameB = b.last.toUpperCase();
+
+let comparison = 0;
+  if (nameA > nameB) {
+    comparison = 1;
+  } else if (nameA < nameB) {
+    comparison = -1;
+  }
+  return comparison;
+}
+
+order = entrepreneurs.sort(compare);
+console.log(order)
